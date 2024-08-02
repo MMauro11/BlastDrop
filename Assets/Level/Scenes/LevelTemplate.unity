@@ -2570,11 +2570,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbd919e2bd8b9fc4bbe14eb837ade9d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1800037548 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4404430153313545095, guid: a85160486b4eec94a924a28a54ae75db, type: 3}
-  m_PrefabInstance: {fileID: 1337451195859513679}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1800453281
 GameObject:
   m_ObjectHideFlags: 0
@@ -3596,6 +3591,10 @@ PrefabInstance:
       value: 0.85
       objectReference: {fileID: 0}
     - target: {fileID: 4850405479358985682, guid: e247695bc6f5bbd4ca642734d48a12fa, type: 3}
+      propertyPath: tolerance
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4850405479358985682, guid: e247695bc6f5bbd4ca642734d48a12fa, type: 3}
       propertyPath: PauseCanvas
       value: 
       objectReference: {fileID: 1828722009}
@@ -3671,7 +3670,7 @@ PrefabInstance:
     - target: {fileID: 1208430660160093539, guid: 511fd9f5349aa2e4ca62f5aafee8dd34, type: 3}
       propertyPath: enemies.Array.data[0]
       value: 
-      objectReference: {fileID: 1800037548}
+      objectReference: {fileID: 4404430153313545095, guid: a85160486b4eec94a924a28a54ae75db, type: 3}
     - target: {fileID: 3318249234790749728, guid: 511fd9f5349aa2e4ca62f5aafee8dd34, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.4510834

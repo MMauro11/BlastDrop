@@ -50,8 +50,8 @@ public class PlayerControl : MonoBehaviour
         }
         else
         {
-            //not on beat
-            //multiplier down
+            //not on beat calling Streak breaker
+            ScoreController.instance.StreakDown();
         }
     }
 

@@ -33,11 +33,12 @@ public class ScoreController : MonoBehaviour
 
     private void MultiplierDown()
     {
-        if (multiplier !<=1)
+        if (multiplier > 1)
         {
             multiplier--;
+            UpdateMultiplierText();
+            Conductor.instance.MultDown();
         }
-        UpdateMultiplierText();
     }
 
     private void AddPoints(int points)
@@ -54,6 +55,7 @@ public class ScoreController : MonoBehaviour
         {
             MultiplierUp();
         }
+        print("Streak is" + streak);
     }
 
     private void MultiplierUp()
@@ -70,6 +72,7 @@ public class ScoreController : MonoBehaviour
     {
         streak = 0;
         MultiplierDown();
+        print("Streak down");
     }
 
     private void UpdateMultiplierText() { multiplierGo.SetText(multiplier.ToString());}

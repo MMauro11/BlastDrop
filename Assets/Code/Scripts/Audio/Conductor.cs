@@ -81,7 +81,7 @@ public class Conductor : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        MultipliersSilence();
+        SilenceAllMultipliers();
         //paused = false;
         //pauseTimeStamp = -1f; //-1f mean "not managed"
         loopPositionInBeats = 0;
@@ -190,13 +190,13 @@ public class Conductor : MonoBehaviour
         get { return secPerBeat; }
     }
 
-    public void MultipliersSilence()
+    public void SilenceAllMultipliers()
     {
         AudioSource clip;
         for(int i=0; i<MultClips.Length; i++)
         {
             clip = MultClips[i];
-            clip.volume = clip.GetComponent<ClipController>().initialVolume;
+            SilenceMultiplier(clip);
         }
     }
 
@@ -240,12 +240,28 @@ public class Conductor : MonoBehaviour
         NextBarClips.Clear();
     }
 
-    public void PlayMultUp() 
+    /// <summary>
+    /// Trigger Multiplier Down, silencing last multiplier audio clip
+    /// </summary>
+    public void MultDown() 
+    {
+        SilenceMultiplier(MultClips[actualMult]);
+        actualMult--;
+    }
+
+    private void PlayMultUp() 
     { 
         multUp.Play();
     }
-    public void PlayMultDown()
+    private void PlayMultDown()
     { 
         multDown.Play();
+    }
+
+    //Get the clip volume to the initial volume
+    private void SilenceMultiplier(AudioSource clip)
+    {
+        clip.volume = clip.GetComponent<ClipController>().initialVolume;
+        StartCoroutine(FadeAudioSource.StartFade(clip, SecPerBeat * 2, clip.GetComponent<ClipController>().initialVolume));
     }
 }
