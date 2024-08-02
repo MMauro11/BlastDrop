@@ -44,8 +44,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c512447a84baa8c49a0e0b5ad530d412, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseEnemy: {fileID: 4404430153313545095, guid: a85160486b4eec94a924a28a54ae75db, type: 3}
+  enemies:
+  - {fileID: 151664, guid: fa49e460baf435b4780da7196c2ab473, type: 3}
+  - {fileID: 141316, guid: 84cc3cd234dfc9d4d9d2e92c0eb0af75, type: 3}
+  - {fileID: 130102, guid: 04d0bf4be9447154188d86f6e3b8dce9, type: 3}
   spawnDelay: 1
   enemiesNumber: 1
   barsCounter: 0
-  distanceMultiplier: 10
+  distanceMultiplier: 5

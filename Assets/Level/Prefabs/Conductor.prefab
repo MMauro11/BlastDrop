@@ -48,6 +48,8 @@ MonoBehaviour:
   beatsPerLoop: 16
   clipBpm: 110
   loopPositionInBeats: 0
+  initialVolume: 0
+  maxVolume: 0.85
 --- !u!82 &2893511324829019653
 AudioSource:
   m_ObjectHideFlags: 0
@@ -216,7 +218,7 @@ MonoBehaviour:
   completedLoops: 0
   loopPositionInAnalog: 0
   PauseCanvas: {fileID: 0}
-  tolerance: 0.15
+  tolerance: 0.25
 --- !u!82 &7250907019244228892
 AudioSource:
   m_ObjectHideFlags: 0
@@ -361,6 +363,8 @@ MonoBehaviour:
   beatsPerLoop: 64
   clipBpm: 110
   loopPositionInBeats: 0
+  initialVolume: 0
+  maxVolume: 0.85
 --- !u!82 &3279669275459256430
 AudioSource:
   m_ObjectHideFlags: 0
@@ -633,6 +637,8 @@ MonoBehaviour:
   beatsPerLoop: 16
   clipBpm: 110
   loopPositionInBeats: 0
+  initialVolume: 0
+  maxVolume: 0.85
 --- !u!82 &2814902603912116827
 AudioSource:
   m_ObjectHideFlags: 0
@@ -905,6 +911,8 @@ MonoBehaviour:
   beatsPerLoop: 16
   clipBpm: 110
   loopPositionInBeats: 0
+  initialVolume: 0
+  maxVolume: 0.85
 --- !u!82 &1168992549037557434
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1177,6 +1185,8 @@ MonoBehaviour:
   beatsPerLoop: 16
   clipBpm: 110
   loopPositionInBeats: 0
+  initialVolume: 0
+  maxVolume: 0.85
 --- !u!82 &2256711175193553999
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1321,6 +1331,8 @@ MonoBehaviour:
   beatsPerLoop: 32
   clipBpm: 110
   loopPositionInBeats: 0
+  initialVolume: 0
+  maxVolume: 0.85
 --- !u!82 &3979369469698877152
 AudioSource:
   m_ObjectHideFlags: 0

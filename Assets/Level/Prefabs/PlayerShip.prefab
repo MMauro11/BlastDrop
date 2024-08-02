@@ -2428,6 +2428,7 @@ Transform:
   - {fileID: 3519821638620380486}
   - {fileID: 2375980433047532388}
   - {fileID: 524246749252707411}
+  - {fileID: 3235664848633448768}
   m_Father: {fileID: 524180804128447533}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &527684909087338015
@@ -5227,6 +5228,7 @@ GameObject:
   - component: {fileID: 995197265799929375}
   - component: {fileID: 1003270738927795437}
   - component: {fileID: 2433912831829599505}
+  - component: {fileID: 8149835771891137261}
   m_Layer: 6
   m_Name: Light Blaster
   m_TagString: Untagged
@@ -5315,6 +5317,26 @@ MonoBehaviour:
   m_muzzle: {fileID: 1477962429692330921}
   m_shotPrefab: {fileID: 136330, guid: 8042ecbbff5ddc64eae20a955825db2e, type: 3}
   aimControl: {fileID: 4889805586583736429}
+  loadingCircle: {fileID: 0}
+  particleSys: {fileID: 0}
+  cooldown: 2
+  cooldownAnalogPosition: 0
+  cooldownGo: {fileID: 0}
+--- !u!114 &8149835771891137261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 990237461568441453}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 696dcec787fae4045b45669707f962cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_muzzle: {fileID: 0}
+  m_shotPrefab: {fileID: 0}
+  aimControl: {fileID: 0}
   loadingCircle: {fileID: 0}
   particleSys: {fileID: 0}
   cooldown: 2
@@ -5505,7 +5527,7 @@ MonoBehaviour:
   aimControl: {fileID: 4889805586583736429}
   loadingCircle: {fileID: 0}
   particleSys: {fileID: 1000012600307132, guid: 4e0ed3b3acb529741bd20295c081cdfc, type: 3}
-  cooldown: 0
+  cooldown: 4
   cooldownAnalogPosition: 0
   cooldownGo: {fileID: 0}
 --- !u!1 &1498505017661134628
@@ -6342,7 +6364,7 @@ MonoBehaviour:
   aimControl: {fileID: 4889805586583736429}
   loadingCircle: {fileID: 0}
   particleSys: {fileID: 0}
-  cooldown: 0
+  cooldown: 3
   cooldownAnalogPosition: 0
   cooldownGo: {fileID: 0}
 --- !u!1 &5103232614086221067
@@ -6777,7 +6799,7 @@ MonoBehaviour:
   conductor: {fileID: 0}
   primaryFireAudio: {fileID: 4192115185146579119}
   turningSpeed: 100
-  verticalSpeed: 2
+  verticalSpeed: 7
   dashForce: 30
   playerRb: {fileID: 0}
   cannon1: {fileID: 2433912831829599505}
@@ -6925,7 +6947,7 @@ MonoBehaviour:
   nearestEnemy: {fileID: 0}
   borderLeft: 350
   borderRight: 350
-  borderTop: 100
+  borderTop: 75
   borderBottom: 100
 --- !u!65 &7943473685940585600
 BoxCollider:
@@ -7172,6 +7194,37 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &8807370908881893851
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3235664848633448768}
+  m_Layer: 0
+  m_Name: UIposition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3235664848633448768
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8807370908881893851}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.29, z: 0.3203}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 524572687299149103}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &9125339203361410466
 GameObject:
   m_ObjectHideFlags: 0
