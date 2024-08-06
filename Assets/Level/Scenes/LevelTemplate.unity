@@ -3484,7 +3484,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1208430660160093539, guid: 511fd9f5349aa2e4ca62f5aafee8dd34, type: 3}
       propertyPath: enemiesNumber
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1208430660160093539, guid: 511fd9f5349aa2e4ca62f5aafee8dd34, type: 3}
       propertyPath: distanceMultiplier

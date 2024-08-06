@@ -47,7 +47,6 @@ public class EnemySpawner : MonoBehaviour
             //Cycle enemies to spawn from the array
             enemyIndex++;
             enemyIndex = (int)Mathf.Repeat(enemyIndex, enemies.Length);
-            print(enemyIndex);
         }
     }
 

@@ -65,7 +65,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6533549aaeca89d42b9f37dc4a50a2e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.1
+  speed: 0.4
 --- !u!82 &7265512783262027695
 AudioSource:
   m_ObjectHideFlags: 0
@@ -208,7 +208,7 @@ Rigidbody:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 0
@@ -345,8 +345,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 35886998006476366, guid: d93a24e25e50d9140943f80e560d77d1, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 35886998006476366, guid: d93a24e25e50d9140943f80e560d77d1, type: 3}
       propertyPath: EmissionModule.rateOverDistance.scalar
-      value: 0.5
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 35886998006476366, guid: d93a24e25e50d9140943f80e560d77d1, type: 3}
       propertyPath: ColorModule.gradient.maxGradient.atime1
@@ -387,6 +391,10 @@ PrefabInstance:
     - target: {fileID: 35886998006476366, guid: d93a24e25e50d9140943f80e560d77d1, type: 3}
       propertyPath: ColorModule.gradient.maxGradient.key2.r
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 35886998006476366, guid: d93a24e25e50d9140943f80e560d77d1, type: 3}
+      propertyPath: InitialModule.startLifetime.minMaxState
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 35886998006476366, guid: d93a24e25e50d9140943f80e560d77d1, type: 3}
       propertyPath: ColorModule.gradient.maxGradient.m_NumAlphaKeys
