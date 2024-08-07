@@ -6223,8 +6223,8 @@ MonoBehaviour:
   turningSpeed: 100
   verticalSpeed: 7
   dashForce: 30
-  cannon1: {fileID: 2433912831829599505}
-  cannon2: {fileID: 4778684301330775604}
+  cannon1: {fileID: 4778684301330775604}
+  cannon2: {fileID: 2433912831829599505}
   cannon3: {fileID: 2065560705333283901}
   cannon4: {fileID: 3266934365671987233}
 --- !u!82 &4192115185146579119
@@ -6782,6 +6782,10 @@ PrefabInstance:
       value: Light Blaster
       objectReference: {fileID: 0}
     - target: {fileID: 2940335920332381871, guid: 8bee1e715c427a24a9198ec774be866e, type: 3}
+      propertyPath: cooldown
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2940335920332381871, guid: 8bee1e715c427a24a9198ec774be866e, type: 3}
       propertyPath: aimControl
       value: 
       objectReference: {fileID: 4889805586583736429}
@@ -6818,6 +6822,10 @@ PrefabInstance:
       propertyPath: aimControl
       value: 
       objectReference: {fileID: 4889805586583736429}
+    - target: {fileID: 37803606926447488, guid: a652cd8aefc5b744aaea6ebd593cbd4d, type: 3}
+      propertyPath: projectiles
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6486489137117717347, guid: a652cd8aefc5b744aaea6ebd593cbd4d, type: 3}
       propertyPath: m_Name
       value: Medium Cannon
@@ -6898,7 +6906,7 @@ PrefabInstance:
     - target: {fileID: 37803606926447488, guid: a652cd8aefc5b744aaea6ebd593cbd4d, type: 3}
       propertyPath: m_muzzle
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 6814364420920246956}
     - target: {fileID: 37803606926447488, guid: a652cd8aefc5b744aaea6ebd593cbd4d, type: 3}
       propertyPath: aimControl
       value: 
@@ -6971,6 +6979,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36853cef0de221f43a3ee1522fbf7b75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &6814364420920246956 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8304999483191740685, guid: a652cd8aefc5b744aaea6ebd593cbd4d, type: 3}
+  m_PrefabInstance: {fileID: 3301197148878621601}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8637138733035208498 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6488968787912946835, guid: a652cd8aefc5b744aaea6ebd593cbd4d, type: 3}
@@ -7035,14 +7048,14 @@ PrefabInstance:
     - target: {fileID: 2940335920332381871, guid: 8bee1e715c427a24a9198ec774be866e, type: 3}
       propertyPath: m_muzzle
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 8580892351262021772}
     - target: {fileID: 2940335920332381871, guid: 8bee1e715c427a24a9198ec774be866e, type: 3}
       propertyPath: aimControl
       value: 
       objectReference: {fileID: 4889805586583736429}
     - target: {fileID: 2940335920332381871, guid: 8bee1e715c427a24a9198ec774be866e, type: 3}
       propertyPath: projectiles
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2940335920332381871, guid: 8bee1e715c427a24a9198ec774be866e, type: 3}
       propertyPath: m_shotPrefab
@@ -7067,5 +7080,10 @@ MonoBehaviour:
 --- !u!4 &7943987096512026500 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 333778545309857567, guid: 8bee1e715c427a24a9198ec774be866e, type: 3}
+  m_PrefabInstance: {fileID: 7682973827004227739}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8580892351262021772 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2128535609866926103, guid: 8bee1e715c427a24a9198ec774be866e, type: 3}
   m_PrefabInstance: {fileID: 7682973827004227739}
   m_PrefabAsset: {fileID: 0}

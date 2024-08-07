@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class AlarmLight : MonoBehaviour
 {
-    private float intensity;
     [SerializeField] Light thisLight;
     private AudioSource audio;
+
+    private bool isImmune;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,11 +16,21 @@ public class AlarmLight : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        ShotStats shot;
-        if (collision.gameObject.tag == "Enemy")
+        if (!isImmune)
         {
-            //collision.gameObject.TryGetComponent<ShotStats>(out shot);
-            StartCoroutine(Alarm());
+            ShotStats shot;
+            if (collision.gameObject.tag == "Enemy")
+            {
+                StartCoroutine(Alarm());
+                ScoreController.instance.PlayerHit(10);
+            }
+            if (collision.gameObject.tag == "EnemyShot")
+            {
+                collision.gameObject.TryGetComponent<ShotStats>(out shot);
+                ScoreController.instance.PlayerHit(shot.Damage * Conductor.instance.ActualMultiplier);
+                StartCoroutine(Alarm());
+            }
+            StartCoroutine(ImmunityTime(3)); 
         }
     }
 
@@ -33,5 +44,17 @@ public class AlarmLight : MonoBehaviour
         thisLight.enabled = true;
         yield return new WaitForSeconds(audio.clip.length / 8);
         thisLight.enabled = false;
+    }
+
+    IEnumerator ImmunityTime(float immuneTime)
+    {
+        isImmune = true;
+        float timer = 0;
+        while (timer < immuneTime)
+        {
+            yield return null; // wait for the next Update frame
+            timer += Time.deltaTime;
+        }
+        isImmune = false;
     }
 }

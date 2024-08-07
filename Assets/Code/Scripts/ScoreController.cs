@@ -47,6 +47,15 @@ public class ScoreController : MonoBehaviour
         UpdateScoreText();
     }
 
+    private void RemovePoints(int points)
+    {
+        score -= points;
+        if (score < 0)
+        {
+            score = 0;
+        }
+        UpdateScoreText();
+    }
 
     private void StreakUp() 
     {
@@ -75,6 +84,12 @@ public class ScoreController : MonoBehaviour
         print("Streak down");
     }
 
+    public int PlayerHit(int points)
+    {
+        StreakDown();
+        RemovePoints(points);
+        return points;
+    }
     private void UpdateMultiplierText() { multiplierGo.SetText(multiplier.ToString());}
 
     private void UpdateScoreText() { scoreGo.SetText(score.ToString()); }

@@ -37,7 +37,9 @@ public class Conductor : MonoBehaviour
     [SerializeField] public AudioSource[] MultClips;
 
     //counter of actual multiplier
-    int actualMult = -1;
+    private int actualMult = -1;
+    public int ActualMultiplier { get { return actualMult; } }
+
 
     //The offset to the first beat of the song in seconds
     public float firstBeatOffset;
@@ -79,7 +81,7 @@ public class Conductor : MonoBehaviour
     List<AudioSource> NextBarClips = new List<AudioSource>();
 
     //save the initial timeScale for pause purposes
-    float initialTimeScale=Time.timeScale;
+    float initialTimeScale;
 
     // Start is called before the first frame update
     void Start()
@@ -261,6 +263,7 @@ public class Conductor : MonoBehaviour
     public void MultDown() 
     {
         SilenceMultiplier(MultClips[actualMult]);
+        PlayMultDown();
         actualMult--;
     }
 
