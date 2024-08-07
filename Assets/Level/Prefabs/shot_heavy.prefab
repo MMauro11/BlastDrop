@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 113954260464914495}
   - component: {fileID: 7905924543608644469}
   - component: {fileID: -3319182081655547396}
-  - component: {fileID: 801093012022886487}
+  - component: {fileID: 7749019188685222359}
   m_Layer: 0
   m_Name: shot_heavy
   m_TagString: Projectile
@@ -314,7 +314,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.5505157, y: 0.55402845, z: 7.039473}
   m_Center: {x: 0.0261904, y: 0.043840796, z: 3.6537964}
---- !u!114 &801093012022886487
+--- !u!114 &7749019188685222359
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -323,7 +323,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 136330}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83a1258def3aafa4da68bbe5f3f95512, type: 3}
+  m_Script: {fileID: 11500000, guid: a020d5a3ce5d7aa4da4fa0bc91c04b99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   explosion: {fileID: 1121192042590650, guid: e1b08032bec16ba4eb1ae23cbd572664, type: 3}

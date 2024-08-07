@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - Projectile
   - Sight
+  - Muzzle
   layers:
   - Default
   - TransparentFX

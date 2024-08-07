@@ -15,7 +15,7 @@ public class PlayerControl : MonoBehaviour
     [SerializeField] private float verticalSpeed = 1;
     [SerializeField] private float dashForce = 1f;
     private CameraSideDash cameraSideDash;
-    public Rigidbody playerRb;
+    private Rigidbody playerRb;
     private Vector3 movement;
     private Vector3 inclinationVector;
     private Vector3 playerPosition;

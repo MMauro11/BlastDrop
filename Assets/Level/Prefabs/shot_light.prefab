@@ -120,6 +120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cb039d3a64491f4ebfc852d25b5ee70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 1
 --- !u!108 &10825254
 Light:
   m_ObjectHideFlags: 0
@@ -194,8 +195,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a465ba58b7b7d8b40afe82c116c407d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cooldown: 1
-  damage: 2
+  damage: 1
 --- !u!82 &-5665285311691336966
 AudioSource:
   m_ObjectHideFlags: 0
@@ -207,7 +207,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300002, guid: b7ef7ba77bfaa0648ac9e475cbd94c3b, type: 2}
   m_audioClip: {fileID: 8300000, guid: 9636832620de0bc498155ec695ce4398, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 0.75
   m_Pitch: 1
   Loop: 0

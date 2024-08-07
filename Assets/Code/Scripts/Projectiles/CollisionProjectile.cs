@@ -2,15 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CollisionTrigger : MonoBehaviour
+public class CollisionProjectile : CollisionTrigger
 {
-
-    [Tooltip("Object containing explosion effect")]
-    [SerializeField] protected GameObject explosion;
-
     // Start is called before the first frame update
     void Start()
     {
+        
     }
 
     // Update is called once per frame
@@ -21,6 +18,8 @@ public class CollisionTrigger : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        Destroy(this.gameObject);
         GameObject go = GameObject.Instantiate(explosion, this.transform.position, this.transform.rotation);
+
     }
 }
