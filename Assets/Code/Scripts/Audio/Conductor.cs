@@ -78,6 +78,9 @@ public class Conductor : MonoBehaviour
     //list of AudioSource clips to play on next Bar event
     List<AudioSource> NextBarClips = new List<AudioSource>();
 
+    //save the initial timeScale for pause purposes
+    float initialTimeScale=Time.timeScale;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -163,6 +166,11 @@ public class Conductor : MonoBehaviour
         pauseTimeStamp = (float)AudioSettings.dspTime;
         //Activate pause UI
         PauseCanvas.SetActive(true);
+        initialTimeScale = Time.timeScale;
+        Time.timeScale = 0;
+
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 
     public void Resume()
@@ -172,6 +180,13 @@ public class Conductor : MonoBehaviour
         //Deactivate pause UI
         PauseCanvas.SetActive(false);
         pauseTimeStamp = -1f;
+
+        //restore time
+        Time.timeScale = initialTimeScale;
+
+        //lock cursor
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     public bool IsPaused() { return paused; }

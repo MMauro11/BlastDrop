@@ -258,6 +258,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4822485124487022983}
     m_Modifications:
+    - target: {fileID: 35886998006476366, guid: d93a24e25e50d9140943f80e560d77d1, type: 3}
+      propertyPath: EmissionModule.rateOverDistance.scalar
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 199175977787646244, guid: d93a24e25e50d9140943f80e560d77d1, type: 3}
       propertyPath: m_Name
       value: FlameThrowerEffect
@@ -346,7 +350,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 35886998006476366, guid: d93a24e25e50d9140943f80e560d77d1, type: 3}
       propertyPath: InitialModule.startLifetime.scalar
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 35886998006476366, guid: d93a24e25e50d9140943f80e560d77d1, type: 3}
       propertyPath: EmissionModule.rateOverDistance.scalar

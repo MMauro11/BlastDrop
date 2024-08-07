@@ -29,7 +29,11 @@ public class InputManager : MonoBehaviour
     public event Action RightPressed;
 
     private void Start()
-    {
+    {   
+        //Hide and lock position of mouse Cursor
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+
         player = GameObject.FindObjectOfType<PlayerControl>();
     }
     private void Update()
@@ -101,7 +105,7 @@ public class InputManager : MonoBehaviour
                     {
                         Conductor.instance.Pause();
                     }
-                    else
+                    else if (Conductor.instance.IsPaused())
                     {
                         Conductor.instance.Resume();
                     }
